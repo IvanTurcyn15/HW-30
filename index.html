@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       .main{
+        width: 300px;
+        height: 300px;
+        outline: 1px solid black;
+        position: relative;
+        margin: 0 auto;
+        margin-top: 50px;
+       }
+
+       .child{
+        width: 75px;
+        height: 75px;
+        position: absolute;
+        animation-name: moveAround;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+       }
+
+       .child:hover{
+        animation-play-state: paused;
+       }
+
+       @keyframes moveAround {
+            0%{
+                top: 0;
+                left: 0;
+                background-color: red;
+            }
+            25%{
+                top: 225px;
+                left: 0;
+                background-color: blue;
+            }
+            50%{
+                top: 225px;
+                left: 225px;
+                background-color: green;
+            }
+            75%{
+                top: 0;
+                left: 225px;
+                background-color: yellow;
+            }
+            100%{
+                top: 0;
+                left: 0;
+                background-color: red;
+            }
+
+       }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="child"></div>
+    </div>
+</body>
+</html>
